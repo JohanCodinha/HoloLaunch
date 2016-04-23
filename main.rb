@@ -6,7 +6,7 @@ get '/' do
 end
 
 get '/app' do
-	erb :app
+	erb :appp
 end
 
 
