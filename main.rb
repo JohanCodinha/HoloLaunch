@@ -5,6 +5,10 @@ get '/' do
   erb :index
 end
 
+get '/app' do
+	erb :app
+end
+
 
 
 
