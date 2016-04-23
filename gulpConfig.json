@@ -1,0 +1,26 @@
+{
+	"options" : {
+		"autoprefixer" : ["last 8 versions"]
+	},
+	"less" : {
+		"output": "main.css",
+		"main"  : "src/less/lightgrid.less",
+		"dest"  : "public/css",
+		"path"  : [
+			"src/less/**/*.less"
+		]
+	},
+	"js"       : {
+		"main"   : ["src/js/underscore.js","src/js/**.js"],
+		"dest"   : "public/js",
+		"path"   : [
+			"src/js/*.js"
+		]
+	},
+	"css" : {
+		"path" : "public/css/*.css"
+	},
+	"html" : {
+		"main" : "views/partials/app-head.handlebars"
+	}
+}
