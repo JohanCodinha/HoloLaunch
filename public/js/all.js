@@ -1549,20 +1549,6 @@
 
 
 
-
-var comments = [
-	{
-		id          : _.uniqueId('comment_'),
-		created     : new Date(),
-		authorEmail : 'shashwat.amin@yahoo.com',
-		authorName  : 'Shash7',
-		comment     : 'Muhahahaaa',
-		x           : 75,
-		y           : 50
-	}
-];
-
-
 (function(window, document) {
 	
 	'use strict';
@@ -1752,7 +1738,7 @@ var comments = [
 	$(document).ready(init);
 	// -------- Bootstart END -------- //
 	
-})(window, document);
+})(window, document)
 //     Backbone.js 1.2.3
 
 //     (c) 2010-2015 Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
