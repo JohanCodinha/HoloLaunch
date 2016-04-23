@@ -1598,6 +1598,10 @@ p {
 .icon-arrow-right:before {
   content: "\e901";
 }
+@font-face {
+  font-family: 'DINPro-Light';
+  src: url('fonts/DINPro-Light.otf');
+}
 body.index .wrapper {
   position: relative;
   height: 100vh;
@@ -1648,6 +1652,7 @@ body.index .wrapper .page-title {
   padding-left: 5%;
 }
 .main-content #live-launch {
+  position: relative;
   padding-top: 50px;
 }
 .main-content #past-launches {
@@ -1661,6 +1666,15 @@ body.index .wrapper .page-title {
   padding-left: 30%;
   padding-bottom: 10%;
   height: 90vh;
+}
+.main-content #time {
+  position: absolute;
+  top: 22%;
+  left: 61%;
+  display: block;
+  font-size: 28pt;
+  color: white;
+  font-family: 'DINPro-Light';
 }
 .img-responsive {
   max-width: 100%;
