@@ -9,18 +9,60 @@ html {
 			width: 100%;
 			height: 100%;
 
-			.app {
-				width: 100%;
-				height: 100%;
-			}
+			background-color: #000;
 		}
 	}
 }
 
 .app {
+	width: 377px;
+	height: 377px;
+	margin: 0 auto;
+
 	background-color: #000;
 
-	.view {
+	position: relative;
+	perspective: 230px;
+
+	
+  	.cube {
+  		width: 100%;
+		height: 100%;
+		position: absolute;
+		-webkit-transform-style: preserve-3d;
+		-moz-transform-style: preserve-3d;
+		-o-transform-style: preserve-3d;
+		transform-style: preserve-3d;
+		-webkit-transition: -webkit-transform 1s;
+		-moz-transition: -moz-transform 1s;
+		-o-transition: -o-transform 1s;
+		transition: transform 1s;
+
+		transform: scale(0.18);
+
 		background-color: @color-primary;
+
+
+		.view {
+			display: block;
+			position: absolute;
+			top:0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			margin: 0;
+			line-height: 377px;
+			font-size: 120px;
+			font-weight: bold;
+			color: white;
+			text-align: center;
+
+			&.front  { transform: rotateY(   0deg ) translateZ( 188px ); }
+			&.back   { transform: rotateX( 180deg ) translateZ( 188px );  }
+			&.right  { transform: rotateY(  90deg ) translateZ( 188px );  }
+			&.left   { transform: rotateY( -90deg ) translateZ( 188px );  }
+			&.top    { transform: rotateX(  90deg ) translateZ( 188px );  }
+			&.bottom { transform: rotateX( -90deg ) translateZ( 188px );  }
+		}
 	}
 }

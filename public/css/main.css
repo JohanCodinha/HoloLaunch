@@ -1680,14 +1680,66 @@ html.fullscreen {
 html.fullscreen body {
   width: 100%;
   height: 100%;
-}
-html.fullscreen body .app {
-  width: 100%;
-  height: 100%;
-}
-.app {
   background-color: #000;
 }
-.app .view {
+.app {
+  width: 377px;
+  height: 377px;
+  margin: 0 auto;
+  background-color: #000;
+  position: relative;
+  -webkit-perspective: 230px;
+          perspective: 230px;
+}
+.app .cube {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  -webkit-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transition: -webkit-transform 1s;
+  transition: transform 1s;
+  -webkit-transform: scale(0.18);
+      -ms-transform: scale(0.18);
+          transform: scale(0.18);
   background-color: #E82C39;
+}
+.app .cube .view {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  line-height: 377px;
+  font-size: 120px;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+}
+.app .cube .view.front {
+  -webkit-transform: rotateY(0deg) translateZ(188px);
+          transform: rotateY(0deg) translateZ(188px);
+}
+.app .cube .view.back {
+  -webkit-transform: rotateX(180deg) translateZ(188px);
+          transform: rotateX(180deg) translateZ(188px);
+}
+.app .cube .view.right {
+  -webkit-transform: rotateY(90deg) translateZ(188px);
+          transform: rotateY(90deg) translateZ(188px);
+}
+.app .cube .view.left {
+  -webkit-transform: rotateY(-90deg) translateZ(188px);
+          transform: rotateY(-90deg) translateZ(188px);
+}
+.app .cube .view.top {
+  -webkit-transform: rotateX(90deg) translateZ(188px);
+          transform: rotateX(90deg) translateZ(188px);
+}
+.app .cube .view.bottom {
+  -webkit-transform: rotateX(-90deg) translateZ(188px);
+          transform: rotateX(-90deg) translateZ(188px);
 }
