@@ -13,3 +13,6 @@ end
 
 
 
+get '/pastlaunches' do
+	erb :pastlaunches
+end

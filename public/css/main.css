@@ -1598,6 +1598,10 @@ p {
 .icon-arrow-right:before {
   content: "\e901";
 }
+@font-face {
+  font-family: 'DINPro-Light';
+  src: url('fonts/DINPro-Light.otf');
+}
 body.index .wrapper {
   position: relative;
   height: 100vh;
@@ -1635,43 +1639,106 @@ body.index .wrapper .page-title {
     letter-spacing: 2px;
   }
 }
-.index-btn #live-btn {
+.main-content {
+  height: 100vh;
+  background-color: #0c1e28;
+}
+.main-content .button-row {
+  padding-left: 10px;
+}
+.main-content #logo {
+  padding-top: 10%;
+  padding-right: 5%;
+  padding-left: 5%;
+}
+.main-content #live-launch {
   position: relative;
-  height: 50vh;
-  background: #9c27b0;
-  color: white;
+  padding-top: 50px;
 }
-.index-btn #live-btn #live-text {
-  font-family: 'Karla', sans-serif;
-  font-style: 72pt;
+.main-content #past-launches {
+  padding-top: 10px;
+}
+.main-content #antares-desc {
+  padding-top: 80px;
+}
+.main-content #rocket {
+  padding-top: 20%;
+  padding-left: 30%;
+  padding-bottom: 10%;
+  height: 90vh;
+}
+.main-content #time {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  height: 30%;
-  width: 50%;
-  margin: -5% 0 0 -25%;
-}
-.index-btn #previous-btn {
-  position: relative;
-  height: 50vh;
-  background: #e91e63;
+  top: 22%;
+  left: 61%;
+  display: block;
+  font-size: 28pt;
   color: white;
+  font-family: 'DINPro-Light';
 }
-.index-btn #previous-btn #previous-text {
-  font-family: 'Karla', sans-serif;
-  font-size: 54pt;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  height: 30%;
-  width: 50%;
-  margin: -5% 0 0 -25%;
+.img-responsive {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 body.about .box {
   min-height: 100px;
   margin-top: 15px;
   border-radius: 3px;
   background-color: #E82C39;
+}
+body.index .wrapper {
+  position: relative;
+  height: 100vh;
+}
+body.index .wrapper .page-title {
+  position: absolute;
+  top: 50%;
+  left: 20%;
+  margin: 0;
+  font-weight: 700;
+  font-size: 8em;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background: -webkit-gradient(linear, left top, right top, from(#E82C39), to(#E6D45C));
+  background: -webkit-linear-gradient(left, #E82C39, #E6D45C);
+  background: linear-gradient(left, #E82C39, #E6D45C);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+@media screen and (max-width: 992px) {
+  body.index .wrapper .page-title {
+    left: 40px;
+    font-size: 7em;
+  }
+}
+@media screen and (max-width: 768px) {
+  body.index .wrapper .page-title {
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 4em;
+    letter-spacing: 2px;
+  }
+}
+.main-content-list {
+  height: 100%;
+  background-color: #0c1e28;
+  padding-bottom: 40px;
+}
+.main-content-list #logo {
+  padding-top: 10%;
+  padding-right: 5%;
+  padding-left: 5%;
+}
+.main-content-list #past-launches-text {
+  padding-top: 14%;
+}
+.main-content-list #past-launches-list {
+  padding-top: 6%;
 }
 html.fullscreen {
   width: 100%;
