@@ -8,7 +8,7 @@ end
 
 
 get '/app' do
-	erb :appp
+	erb :app
 end
 
 
