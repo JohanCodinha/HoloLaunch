@@ -1,0 +1,96 @@
+// main: lightgrid.less
+
+/* ----------------------------------------------------------------
+ * grid.less
+ * 
+ * Grid layout classes and mixins are defined here
+ * Usable mixins are:
+ *  .grid(@columns;@gutter)
+ *  .offset(@columns)
+ *  .break(@breakpoint)
+ * 
+ * The first two mixins will prepend the classname they are called in.
+ * Eg:
+ * .col-md {
+ * 	.grid(12, 10);
+ * }
+ * Will generate .col-md-1, .col-md-2, etc
+ * ---------------------------------------------------------------- */
+
+
+// Used to break the grid
+@grid-breakpoint : @screen-md;
+
+// Generates grid
+.grid(@i; @gutter) when (@i > 0) {
+	&@{i} {
+		float: left;
+		width: (@i / @columns) * 100%;
+		padding-left: @gutter * 1px;
+		padding-right: @gutter * 1px;
+	}
+	.grid(@i - 1; @gutter);
+}
+
+
+// Generates offsets
+.offset(@i) when (@i > 0) {
+	&@{i} {
+		margin-left: (@i / @columns) * 100%;
+	}
+	.offset(@i - 1);
+}
+
+// Generates breakpoint
+.break(@breakpoint) {
+	@media screen and (max-width : @breakpoint) {
+		width: 100%;
+		padding-left: 0;
+		padding-right: 0;
+		margin-left: 0; // Will reset offset too
+	}
+}
+
+// .row Container element
+.row {
+	
+	// Adds padding to maintain gutter consistency
+	padding-left: @gutter * 1px;
+	padding-right: @gutter * 1px;
+	
+	// clearfix 'cause we're using floats
+	.clearfix();
+	
+	// Generates grid
+	> .col- {
+		.grid(@columns; @gutter:@gutter);
+	}
+	
+	// Generates offset
+	> .offset- {
+		.offset(@columns);
+	}
+	
+	// .reverse helper class reverses order of columns
+	&.reverse {
+		> [class^=col-] {
+			float: right;
+		}
+	}
+	
+	// .gutter helper class removes gutters
+	&.no-gutter {
+		padding-left: 0;
+		padding-right: 0;
+		
+		> [class^=col-] {
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
+	
+	// Generates breakpoint
+	> [class^=col-] {
+		.break(@grid-breakpoint);
+	}
+}

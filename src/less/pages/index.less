@@ -1,0 +1,40 @@
+
+
+body.index {
+	
+	.wrapper {
+		position: relative;
+		height: 100vh;
+		
+		.page-title {
+			position: absolute;
+			top:50%;
+			left: 20%;
+			margin: 0;
+			
+			font-weight: 700;
+			font-size: 8em;
+			text-transform: uppercase;
+			letter-spacing: 4px;
+			
+			transform: translateY(-50%);
+			
+			background: linear-gradient(left, @color-primary, @color-secondary);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			
+			@media screen and (max-width:@screen-md) {
+				left: 40px;
+				font-size: 7em;
+			}
+			@media screen and (max-width:@screen-sm) {
+				left: 0;
+				width: 100%;
+				text-align: center;
+				font-size: 4em;
+				letter-spacing: 2px;
+			}
+		}
+	}
+	
+}

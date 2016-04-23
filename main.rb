@@ -5,8 +5,10 @@ get '/' do
   erb :index
 end
 
-get '/login' do
- erb :login
+
+
+get '/app' do
+	erb :app
 end
 
 

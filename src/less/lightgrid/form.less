@@ -1,0 +1,99 @@
+// main: lightgrid.less
+
+/* ----------------------------------------------------------------
+ * form.less
+ * 
+ * Basic form elements styling is defined here
+ * ---------------------------------------------------------------- */
+
+
+@base-padding: 6;
+@base-height: 38px;
+
+/*
+ * Base input styles
+ */
+input, textarea, select {
+	height: @base-height;
+	display: inline-block;
+	padding: @base-padding * 1px;
+	vertical-align: top;
+	line-height: inherit;
+	
+	&:focus {
+		outline-color: @focus-color;
+	}
+}
+
+textarea {
+	height: auto;
+}
+
+select {
+	padding: @base-padding + 2 * 1px;
+	padding-bottom: @base-padding + 1 * 1px;
+}
+
+// Styles for all things resembling an input element
+input[type="text"], input[type="email"], input[type="password"], textarea, select {
+}
+
+input[type="text"]:hover,
+input[type="email"]:hover,
+input[type="password"]:hover,
+select:hover,
+textarea:hover {	
+}
+
+input[type="text"]:active,
+input[type="email"]:active,
+input[type="password"]:active,
+select:active,
+textarea:active {
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+select:focus,
+textarea:focus {	
+}
+
+
+/*
+ * Base button styles
+ */
+input[type="button"], input[type="submit"], button {
+	height: @base-height;
+	
+	line-height: inherit;
+	padding: @base-padding * 1px @base-padding * 3 * 1px;
+	display: inline-block;
+	vertical-align: top;
+	
+	font-weight: 700;
+	
+	color:#FFF;
+	background-color: @color-secondary;
+	border-radius: 3px;
+	border:none;
+	
+	&:focus {
+		outline-color: @focus-color;
+	}
+}
+
+input[type="button"]:hover,
+input[type="submit"]:hover,
+button:hover {
+}
+
+input[type="button"]:active,
+input[type="submit"]:active,
+button:active {
+}
+
+input[type="button"]:focus,
+input[type="submit"]:focus,
+button:focus {
+}
