@@ -1687,6 +1687,59 @@ body.about .box {
   border-radius: 3px;
   background-color: #E82C39;
 }
+body.index .wrapper {
+  position: relative;
+  height: 100vh;
+}
+body.index .wrapper .page-title {
+  position: absolute;
+  top: 50%;
+  left: 20%;
+  margin: 0;
+  font-weight: 700;
+  font-size: 8em;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background: -webkit-gradient(linear, left top, right top, from(#E82C39), to(#E6D45C));
+  background: -webkit-linear-gradient(left, #E82C39, #E6D45C);
+  background: linear-gradient(left, #E82C39, #E6D45C);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+@media screen and (max-width: 992px) {
+  body.index .wrapper .page-title {
+    left: 40px;
+    font-size: 7em;
+  }
+}
+@media screen and (max-width: 768px) {
+  body.index .wrapper .page-title {
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 4em;
+    letter-spacing: 2px;
+  }
+}
+.main-content-list {
+  height: 100%;
+  background-color: #0c1e28;
+  padding-bottom: 40px;
+}
+.main-content-list #logo {
+  padding-top: 10%;
+  padding-right: 5%;
+  padding-left: 5%;
+}
+.main-content-list #past-launches-text {
+  padding-top: 14%;
+}
+.main-content-list #past-launches-list {
+  padding-top: 6%;
+}
 html.fullscreen {
   width: 100%;
   height: 100%;
